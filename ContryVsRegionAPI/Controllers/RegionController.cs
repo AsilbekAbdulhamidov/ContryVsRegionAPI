@@ -27,6 +27,7 @@ namespace ContryVsRegionAPI.Controllers
         public async Task<IActionResult> Post([FromForm] RegionDTO DTO)
         {
             await _servics.Create(DTO);
+            //
             return Ok();
         }
 
