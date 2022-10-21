@@ -24,10 +24,10 @@ namespace ContryVsRegionAPI.Controllers
 
         }
         [HttpPost]
-        public async Task<IActionResult> Post([FromForm] RegionDTO DTO)
+        public async Task<IActionResult> Post([FromBody] RegionDTO DTO)
         {
             await _servics.Create(DTO);
-            //
+           
             return Ok();
         }
 
@@ -38,7 +38,7 @@ namespace ContryVsRegionAPI.Controllers
 
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] RegionDTO DTO)
+        public async Task<IActionResult> Update(int id, RegionDTO DTO)
         {
 
 
